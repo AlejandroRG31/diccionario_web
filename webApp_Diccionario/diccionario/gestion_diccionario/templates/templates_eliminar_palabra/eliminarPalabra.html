@@ -1,0 +1,21 @@
+<html>
+
+<h1>
+DICCIONARIO
+</h1>
+
+<h2>
+Eliminar Palabra
+</h2>
+
+<body>
+    <form action="/success_eliminada/" method="POST"> {% csrf_token %}
+
+        <input type="text" name="palabra">
+
+        <input type="submit" value="Eliminar">
+    
+    </form>
+</body>
+
+</html>

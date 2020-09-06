@@ -1,0 +1,21 @@
+{% extends 'plantilla_principal.html' %}
+
+{% block palabraBuscada %}
+    {{palabra}}
+{% endblock palabraBuscada %}
+
+
+{% block definicionesContenido %}
+
+    {% if definiciones %}
+        <ol>
+            {% for definicion in definiciones %}
+                <li>
+                    {{definicion}}
+                </li>
+            {% endfor %}
+        </ol>
+ 
+    {% endif %}
+
+{% endblock definicionesContenido %}

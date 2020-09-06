@@ -1,0 +1,36 @@
+<html>
+
+<h1>
+DICCIONARIO
+</h1>
+
+<body>
+    <form action="/buscar/" method="GET">
+
+        <input type="text" name="palabra">
+        <input type="submit" value="Buscar">
+    
+    </form>
+</body>
+
+<h2>
+{% block palabraBuscada %} {% endblock %}
+</h2>
+
+{% block definicionesContenido %} {% endblock %}
+
+<body>
+    <form action="/anadirPalabra/" method="GET">
+        <input type="submit" value="Añadir palabra/definición">
+    </form>
+
+    <form action="/editar_def_paso1/" method="GET">
+        <input type="submit" value="Editar definición">
+    </form>
+    
+    <form action="/eliminarPalabra/" method="GET">
+        <input type="submit" value="Eliminar palabra">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<html>
+
+<h1>
+DICCIONARIO
+</h1>
+
+<h2>
+Editar Definición
+</h2>
+
+<body>
+Elige la definicion a cambiar y escribe la nueva (si dejas vacío el cuadro la definición se eliminará)
+
+<h2>
+<p>{{palabra}}</p>
+</h2>
+
+<form action="/success_editada/" method="POST">{% csrf_token %}
+    {% if definiciones %}
+        <ol>
+
+            {% for definicion in definiciones %}
+                <input type="radio" id="{{definicion.id}}" name="defi" value="{{definicion.id}}">{{definicion}}<br>
+            {% endfor %}
+            
+        </ol>
+    <br>
+    <p><textarea name="mensaje" rows="6" cols="60"></textarea></p>
+
+    <input type="submit" value="Editar">
+
+    {% endif %}
+</form> 
+</body>
+</html>

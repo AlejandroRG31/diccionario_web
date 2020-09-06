@@ -1,0 +1,34 @@
+<html>
+
+<h1>
+DICCIONARIO
+</h1>
+
+<h2>
+Añadir Palabra
+</h2>
+
+<body>
+    <form action="/success_anadida/" method="POST"> {% csrf_token %}
+
+        Palabra: <br>
+            <input type="text" name="palabra"><br><br>
+        Tipo:<br>
+            <input type="radio" id="1" name="tipo_palabra" value="Sustantivo">Sustantivo<br>
+            <input type="radio" id="2" name="tipo_palabra" value="Adjetivo">Adjetivo<br>
+            <input type="radio" id="3" name="tipo_palabra" value="Determinante">Determinante<br>
+            <input type="radio" id="4" name="tipo_palabra" value="Pronombre">Pronombre<br>
+            <input type="radio" id="5" name="tipo_palabra" value="Verbo">Verbo<br>
+            <input type="radio" id="6" name="tipo_palabra" value="Adverbio">Adverbio<br>
+            <input type="radio" id="7" name="tipo_palabra" value="Preposiciones">Preposiciones<br>
+            <input type="radio" id="8" name="tipo_palabra" value="Conjuncion">Conjuncion<br><br>
+        Definicion:
+        <p><textarea name="definicion" rows="6" cols="60"></textarea></p>
+
+        <input type="submit" value="Añadir">
+    
+    </form>
+</body>
+
+</html>
+
