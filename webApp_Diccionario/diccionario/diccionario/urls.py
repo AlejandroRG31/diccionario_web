@@ -15,17 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from gestion_diccionario.views import inicio, busqueda, anadirPalabra, success_anadida, eliminarPalabra, success_eliminada,editar_def_paso1, editar_def_paso2, success_editada
+from gestion_diccionario.views import inicio, busqueda, anadirPalabra, eliminarPalabra,editar_def_paso1, editar_def_paso2
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("inicio/", inicio),
-    path("buscar/", busqueda),
-    path("anadirPalabra/", anadirPalabra),
-    path("success_anadida/", success_anadida),
-    path("eliminarPalabra/", eliminarPalabra),
-    path("success_eliminada/", success_eliminada),
-    path("editar_def_paso1/", editar_def_paso1),
-    path("editar_def_paso2/", editar_def_paso2),
-    path("success_editada/", success_editada),
+    path("inicio/", inicio.as_view()),
+    path("buscar/", busqueda.as_view()),
+    path("anadirPalabra/", anadirPalabra.as_view()),
+    path("eliminarPalabra/", eliminarPalabra.as_view()),
+    path("editar_def_paso1/", editar_def_paso1.as_view()),
+    path("editar_def_paso2/", editar_def_paso2.as_view()),
 ]
